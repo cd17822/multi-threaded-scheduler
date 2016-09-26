@@ -8,8 +8,8 @@ public class Results implements StdoutDisplayInterface {
     // appropriate method to save prime number to the data structure
 
     public void writeScheduleToScreen() {
-	// ..
+       // ..
     }
-} 
+}
 
 
