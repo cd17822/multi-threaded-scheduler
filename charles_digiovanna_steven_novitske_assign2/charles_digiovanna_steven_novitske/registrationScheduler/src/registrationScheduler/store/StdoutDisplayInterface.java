@@ -1,4 +1,3 @@
-
 package registrationScheduler.store;
 
 public interface StdoutDisplayInterface {

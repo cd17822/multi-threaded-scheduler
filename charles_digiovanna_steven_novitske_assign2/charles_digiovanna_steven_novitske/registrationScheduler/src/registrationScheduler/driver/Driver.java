@@ -1,4 +1,3 @@
-
 package registrationScheduler.driver;
 
 public class Driver{

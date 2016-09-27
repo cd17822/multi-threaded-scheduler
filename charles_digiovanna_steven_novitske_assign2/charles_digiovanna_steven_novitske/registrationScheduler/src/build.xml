@@ -19,7 +19,6 @@
         <mkdir dir="${classes}"/>
     </target>
 
-
     <target name="jar">
         <mkdir dir="${BUILD}/jar"/>
         <jar destfile="${BUILD}/jar/registrationScheduler.jar" basedir="${BUILD}/classes">
@@ -43,7 +42,6 @@
            optimize="on"
            deprecation="off"/>
     </target>
-
 
     <target name="run" depends="jar">
         <java jar="${BUILD}/jar/registrationScheduler.jar"  fork="true">

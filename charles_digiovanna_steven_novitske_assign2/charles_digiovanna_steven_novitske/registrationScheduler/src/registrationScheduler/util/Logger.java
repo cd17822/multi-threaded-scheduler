@@ -1,4 +1,3 @@
-
 package registrationScheduler.util;
 
 public class Logger{
