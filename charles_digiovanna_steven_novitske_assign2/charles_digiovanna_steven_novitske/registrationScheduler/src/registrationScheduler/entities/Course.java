@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Course {
     private String name;
 
-    private final int max_students = 10;
+    private final int max_students = 60;
 
     private ArrayList<Student> students = new ArrayList<>();
 
@@ -59,5 +59,12 @@ public class Course {
      */
     public ArrayList<Student> getStudents() {
         return this.students;
+    }
+
+    /**
+     * @return size of students member variable.
+     */
+    public int getNumStudents() {
+        return this.students.size();
     }
 }

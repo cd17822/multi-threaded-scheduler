@@ -6,8 +6,8 @@ public class Student {
     private String name;
     private int preference_score;
 
-    private final int max_courses = 3;
-    private static final int max_preferences = 4;
+    private final int max_courses = 5;
+    private final int max_preferences = 7;
 
     private ArrayList<Course> courses = new ArrayList<>();
     private Course[] preferences = new Course[max_preferences];
@@ -61,7 +61,7 @@ public class Student {
     }
 
     /**
-     * @return sets preferences member variable.
+     * sets preferences member variable.
      */
     public void setPreferences(Course[] preferences){ //throws BadInputException {
         if (preferences.length != this.max_preferences) {
@@ -71,6 +71,13 @@ public class Student {
         for (int i = 0; i < preferences.length; ++i) {
             this.preferences[i] = preferences[i];
         }
+    }
+
+    /**
+     * @return max_preferences limit
+     */
+    public int getMaxPreferences() {
+        return this.max_preferences
     }
 
     /**

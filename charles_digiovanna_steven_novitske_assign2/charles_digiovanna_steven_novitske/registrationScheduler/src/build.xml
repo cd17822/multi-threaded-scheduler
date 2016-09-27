@@ -45,8 +45,8 @@
 
     <target name="run" depends="jar">
         <java jar="${BUILD}/jar/registrationScheduler.jar"  fork="true">
-            <arg value="input.txt"/>  <!-- INPUT_FILE  -->
-            <arg value="output.txt"/> <!-- OUTPUT_FILE -->
+            <arg value="testing/input.txt"/>  <!-- INPUT_FILE  -->
+            <arg value="testing/output.txt"/> <!-- OUTPUT_FILE -->
             <arg value="8"/>          <!-- NUM_THREADS -->
             <arg value="4"/>          <!-- DEBUG_VALUE -->
         </java>

@@ -9,6 +9,10 @@ public class Results implements StdoutDisplayInterface {
     public void writeScheduleToScreen() {
        // ..
     }
+
+    public void storeStudent() {
+
+    }
 }
 
 
