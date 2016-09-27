@@ -45,10 +45,10 @@
 
     <target name="run" depends="jar">
         <java jar="${BUILD}/jar/registrationScheduler.jar"  fork="true">
-            <arg value="HELLO"/>
-            <arg value="DESIGN"/>
-            <arg value="PATTERNS"/>
-            <arg value="CLASS"/>
+            <arg value="input.txt"/>  <!-- INPUT_FILE  -->
+            <arg value="output.txt"/> <!-- OUTPUT_FILE -->
+            <arg value="8"/>          <!-- NUM_THREADS -->
+            <arg value="4"/>          <!-- DEBUG_VALUE -->
         </java>
     </target>
 
