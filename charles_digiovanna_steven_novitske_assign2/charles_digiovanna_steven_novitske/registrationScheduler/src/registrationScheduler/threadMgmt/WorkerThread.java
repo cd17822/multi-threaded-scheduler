@@ -48,7 +48,7 @@ public class WorkerThread implements Runnable  {
     }
 
     private void assignCourses(Student student) {
-        Course[] courses_by_preference = student.getPreferences()
+        Course[] courses_by_preference = student.getPreferences();
 
         float average_students_per_course = this.course_pool.getAverageStudentsPerCourse();
 

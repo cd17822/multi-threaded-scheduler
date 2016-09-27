@@ -77,7 +77,7 @@ public class Student {
      * @return max_preferences limit
      */
     public int getMaxPreferences() {
-        return this.max_preferences
+        return this.max_preferences;
     }
 
     /**
