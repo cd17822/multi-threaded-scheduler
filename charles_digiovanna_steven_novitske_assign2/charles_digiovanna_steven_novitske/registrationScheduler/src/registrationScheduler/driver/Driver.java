@@ -1,19 +1,33 @@
-package registrationScheduler.driver;
+package registrationScheduler;//.driver;
 
 public class Driver{
-    private String input_filename;
-    private String output_filename;
-    private int num_threads;
+    static int NUM_THREADS;
+    static int DEBUG_VALUE;
 
     public static void main(String args[]) {
         if (args.length != 4) {
-            System.err.println("Invalid number of arguments");
+            System.err.println("Must have 4 arguments\n");
+        } else if(Integer.parseInt(args[2]) < 1 || Integer.parseInt(args[2]) > 3) {
+            System.err.println("NUM_THREADS must be between 1 and 3\n");
+        } else if(Integer.parseInt(args[3]) < 0 || Integer.parseInt(args[3]) > 4) {
+            System.err.println("DEBUG_VALUE must be between 0 and 4\n");
         }
+        String input_filename = args[0];
+        String output_filename = args[1];
+        NUM_THREADS = Integer.parseInt(args[2]);
+        DEBUG_VALUE = Integer.parseInt(args[3]);
 
+        Logger.setDebugValue(DEBUG_VALUE);
         CoursePool course_pool = new CoursePool();
-        FileProcessor file_processor = new FileProcessor();
+        FileProcessor file_processor = new FileProcessor(input_filename);
         Results results = new Results();
         CreateWorkers create_workers_factory = new CreateWorkers(file_processor, results);
-        create_workers_factory.startWorkers(num_threads);
+        create_workers_factory.startWorkers();
+
+        if(DEBUG_VALUE == 1) {
+          results.writeScheduleToScreen();
+        } else if(DEBUG_VALUE == 0) {
+          System.out.println("The average preference value is X.Y\n");
+        }
     }
 }

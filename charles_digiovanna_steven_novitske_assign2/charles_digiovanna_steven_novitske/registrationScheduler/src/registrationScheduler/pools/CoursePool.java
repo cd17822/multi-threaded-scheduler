@@ -1,4 +1,4 @@
-package registrationScheduler.pools;
+package registrationScheduler;//.pools;
 
 import java.util.ArrayList;
 
@@ -6,32 +6,32 @@ public class CoursePool {
     private ArrayList<Course> courses = new ArrayList<Course>();
 
     public CoursePool() {
-
+      Logger.writeMessage("CoursePool constructed\n",
+                            Logger.DebugLevel.CONSTRUCTOR);
     }
 
     public Course getCourseWithName(String name) {
-        for (Course c : this.courses) {
-            if (name == c.name) {
+        for (Course c : courses) {
+            if (name == c.getName()) {
                 return c;
             }
         }
-
         return null;
     }
 
     public void addCourse(Course course) {
-        this.courses.add(course);
+        courses.add(course);
     }
 
-    public int getAverageStudentsPerCourse() {
-        if (this.courses.size() == 0) return 0;
+    public float getAverageStudentsPerCourse() {
+        if (courses.size() == 0) return 0;
 
         float total_spots_filled = 0;
 
-        for (Course c : this.courses) {
+        for (Course c : courses) {
             total_spots_filled += c.getNumStudents();
         }
 
-        return total_spots_filled / this.courses.length;
+        return total_spots_filled / courses.size();
     }
 }
