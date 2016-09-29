@@ -1,4 +1,4 @@
-package registrationScheduler;//.util;
+package registrationScheduler.util;
 
 public class Logger{
 

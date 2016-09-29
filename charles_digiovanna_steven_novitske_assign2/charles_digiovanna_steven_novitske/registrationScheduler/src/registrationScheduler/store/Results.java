@@ -1,4 +1,7 @@
-package registrationScheduler;//.store;
+package registrationScheduler.store;
+
+import registrationScheduler.util.Logger;
+import registrationScheduler.entities.Student;
 
 public class Results implements StdoutDisplayInterface {
     // appropriate data structure as private data member

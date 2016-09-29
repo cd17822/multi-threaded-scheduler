@@ -1,8 +1,14 @@
-package registrationScheduler;//.driver;
+package registrationScheduler.driver;
+
+import registrationScheduler.util.Logger;
+import registrationScheduler.util.FileProcessor;
+import registrationScheduler.pools.CoursePool;
+import registrationScheduler.store.Results;
+import registrationScheduler.threadMgmt.CreateWorkers;
 
 public class Driver{
-    static int NUM_THREADS;
-    static int DEBUG_VALUE;
+    public static int NUM_THREADS;
+    public static int DEBUG_VALUE;
 
     public static void main(String args[]) {
         if (args.length != 4) {

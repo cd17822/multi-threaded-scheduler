@@ -1,6 +1,8 @@
-package registrationScheduler;//.entities;
+package registrationScheduler.entities;
 
 import java.util.ArrayList;
+import registrationScheduler.util.Logger;
+import registrationScheduler.entities.Course;
 
 public class Student {
     private String name;

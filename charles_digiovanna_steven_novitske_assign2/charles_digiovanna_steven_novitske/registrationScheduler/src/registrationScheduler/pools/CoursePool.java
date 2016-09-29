@@ -1,6 +1,8 @@
-package registrationScheduler;//.pools;
+package registrationScheduler.pools;
 
 import java.util.ArrayList;
+import registrationScheduler.util.Logger;
+import registrationScheduler.entities.Course;
 
 public class CoursePool {
     private ArrayList<Course> courses = new ArrayList<Course>();

@@ -1,4 +1,11 @@
-package registrationScheduler;//.threadMgmt;
+package registrationScheduler.threadMgmt;
+
+import registrationScheduler.util.Logger;
+import registrationScheduler.util.FileProcessor;
+import registrationScheduler.store.Results;
+import registrationScheduler.pools.CoursePool;
+import registrationScheduler.entities.Student;
+import registrationScheduler.entities.Course;
 
 public class WorkerThread implements Runnable  {
     private FileProcessor file_processor;
