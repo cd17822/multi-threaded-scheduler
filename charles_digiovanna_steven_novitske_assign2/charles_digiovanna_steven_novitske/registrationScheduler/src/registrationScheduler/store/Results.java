@@ -21,7 +21,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
       }
     }
 
-    public void writeScheduleToScreen() {
+    public void writeSchedulesToScreen() {
 
     }
 
