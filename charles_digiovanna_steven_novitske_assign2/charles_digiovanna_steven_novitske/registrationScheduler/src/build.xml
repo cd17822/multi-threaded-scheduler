@@ -48,7 +48,7 @@
             <arg value="testing/input.txt"/>  <!-- INPUT_FILE  -->
             <arg value="testing/output.txt"/> <!-- OUTPUT_FILE -->
             <arg value="2"/>                  <!-- NUM_THREADS -->
-            <arg value="4"/>                  <!-- DEBUG_VALUE -->
+            <arg value="1"/>                  <!-- DEBUG_VALUE -->
         </java>
     </target>
 

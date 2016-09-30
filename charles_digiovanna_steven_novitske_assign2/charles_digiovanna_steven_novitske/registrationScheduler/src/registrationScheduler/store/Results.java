@@ -21,7 +21,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
     }
 
     public void writeSchedulesToFile() {
-      int totalScore = 0;
+      float totalScore = 0;
       try {
         FileWriter writer = new FileWriter(outputFile);
         BufferedWriter buffWriter = new BufferedWriter(writer);
@@ -43,14 +43,14 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
     }
 
     public void writeSchedulesToScreen() {
-      int totalScore = 0;
-      for(int i=0; i<studentData.size(); i++) {
-        System.out.println(studentData.get(i).getName());
-        for(int j=0; j<5; j++) {
-          System.out.println(" " + studentData.get(i).getCourses().get(j));
+      float totalScore = 0;
+      for (Student s : studentData) {
+        System.out.println(s.getName());
+        for (Course c : s.getCourses()) {
+          System.out.println(" " + c);
         }
         System.out.println("\n");
-        totalScore += studentData.get(i).getPreferenceScore();
+        totalScore += s.getPreferenceScore();
       }
       System.out.println("Average preference score: " + totalScore/80);
     }
