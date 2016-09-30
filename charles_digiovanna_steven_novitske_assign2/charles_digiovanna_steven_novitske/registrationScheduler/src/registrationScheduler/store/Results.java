@@ -1,9 +1,10 @@
 package registrationScheduler.store;
 
+import java.util.ArrayList;
 import registrationScheduler.util.Logger;
 import registrationScheduler.entities.Student;
 
-public class Results implements StdoutDisplayInterface {
+public class Results implements StdoutDisplayInterface, FileDisplayInterface {
     // appropriate data structure as private data member
     private ArrayList<Student> studentData;
 
@@ -15,7 +16,9 @@ public class Results implements StdoutDisplayInterface {
     }
 
     public void writeSchedulesToFile() {
-      
+      for(int i=0; i<studentData.size(); i++) {
+
+      }
     }
 
     public void writeScheduleToScreen() {
