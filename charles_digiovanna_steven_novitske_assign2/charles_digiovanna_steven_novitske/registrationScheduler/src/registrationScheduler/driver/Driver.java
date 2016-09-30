@@ -25,6 +25,8 @@ public class Driver{
         CreateWorkers create_workers_factory = new CreateWorkers(file_processor, results, course_pool);
         create_workers_factory.startWorkers();
 
+        results.writeSchedulesToFile();
+
         if(DEBUG_VALUE == 1) {
           results.writeSchedulesToScreen();
         }

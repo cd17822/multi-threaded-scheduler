@@ -35,6 +35,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
           }
           buffWriter.write("\n");
         }
+        buffWriter.write("Average preference score: " + getAvgScore());
         buffWriter.close();
       } catch(IOException ex) {
         ex.printStackTrace();
