@@ -14,7 +14,7 @@ public class CoursePool {
 
     public Course getCourseWithName(String name) {
         for (Course c : courses) {
-            if (name == c.getName()) {
+            if (name.equals(c.getName())) {
                 return c;
             }
         }
@@ -25,7 +25,7 @@ public class CoursePool {
         courses.add(course);
     }
 
-    public float getAverageStudentsPerCourse() {
+    public synchronized float getAverageStudentsPerCourse() {
         if (courses.size() == 0) return 0;
 
         float total_spots_filled = 0;

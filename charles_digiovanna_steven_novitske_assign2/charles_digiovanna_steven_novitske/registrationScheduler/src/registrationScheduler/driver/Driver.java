@@ -27,7 +27,7 @@ public class Driver{
         CoursePool course_pool = new CoursePool();
         FileProcessor file_processor = new FileProcessor(input_filename);
         Results results = new Results();
-        CreateWorkers create_workers_factory = new CreateWorkers(file_processor, results);
+        CreateWorkers create_workers_factory = new CreateWorkers(file_processor, results, course_pool);
         create_workers_factory.startWorkers();
 
         if(DEBUG_VALUE == 1) {

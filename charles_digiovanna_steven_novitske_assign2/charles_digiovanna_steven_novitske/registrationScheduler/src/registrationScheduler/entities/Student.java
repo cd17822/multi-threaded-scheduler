@@ -8,8 +8,8 @@ public class Student {
     private String name;
     private int preference_score;
 
-    private final int MAX_COURSES = 5;
-    private final int MAX_PREFERENCES = 7;
+    public static final int MAX_COURSES = 5;
+    public static final int MAX_PREFERENCES = 7;
 
     private ArrayList<Course> courses = new ArrayList<>();
     private Course[] preferences = new Course[MAX_PREFERENCES];
@@ -75,13 +75,6 @@ public class Student {
         for (int i = 0; i < preferencesIn.length; ++i) {
             preferences[i] = preferencesIn[i];
         }
-    }
-
-    /**
-     * @return max_preferences limit
-     */
-    public int getMaxPreferences() {
-        return MAX_PREFERENCES;
     }
 
     /**

@@ -35,18 +35,17 @@ public class WorkerThread implements Runnable  {
 
     private Student createStudent(String line) {
         String[] tokens = line.split("\\s+");
-        Student student;
-        student = new Student(tokens[0]);
 
-        if (tokens.length != student.getMaxPreferences() + 1) {
+        if (tokens.length != Student.MAX_PREFERENCES + 1) {
             System.err.println("Invalid line in input: " + line);
             return null;
         }
 
-        Course[] preferences = new Course[student.getMaxPreferences() + 1];
+        Student student = new Student(tokens[0]);
+        Course[] preferences = new Course[Student.MAX_PREFERENCES];
 
-        for (int i = 0; i < student.getMaxPreferences(); ++i) {
-            String course_name = tokens[i];
+        for (int i = 0; i < Student.MAX_PREFERENCES; ++i) {
+            String course_name = tokens[i+1];
 
             preferences[i] = course_pool.getCourseWithName(course_name);
 
@@ -67,7 +66,12 @@ public class WorkerThread implements Runnable  {
 
         for  (int i = 0; i < courses_by_preference.length; ++i) {
             Course course = courses_by_preference[i];
-            if (course.getNumStudents()/average_students_per_course <= 1.25 || !all_preferences_met) { // golden ratio
+
+            System.out.println(course);
+            System.out.println(courses_by_preference.length);
+            System.out.println(course.toString());
+
+            if (!all_preferences_met || course.getNumStudents()/average_students_per_course <= 1.5) { // golden ratio
                 if (!student.tryToAddCourseAtPriority(i)) {
                     all_preferences_met = false;
                 }
