@@ -10,7 +10,7 @@ import registrationScheduler.entities.Course;
 
 public class Results implements StdoutDisplayInterface, FileDisplayInterface {
     // appropriate data structure as private data member
-    private ArrayList<Student> studentData;
+    private ArrayList<Student> studentData = new ArrayList<>();
     private String outputFile;
     private float avgPreferenceScore;
 
@@ -46,6 +46,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
 
     public void writeSchedulesToScreen() {
       float totalScore = 0;
+      System.out.println(studentData.size());
       for (Student s : studentData) {
         System.out.println(s.getName());
         for (Course c : s.getCourses()) {
