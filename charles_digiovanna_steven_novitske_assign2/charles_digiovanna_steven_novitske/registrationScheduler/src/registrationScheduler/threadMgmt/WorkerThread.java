@@ -56,6 +56,9 @@ public class WorkerThread implements Runnable  {
                 preferences[i] = course_pool.getCourseWithName(course_name);
             }
         }
+
+        student.setPreferences(preferences);
+
         return student; //Added for compilation
     }
 
@@ -66,10 +69,6 @@ public class WorkerThread implements Runnable  {
 
         for  (int i = 0; i < courses_by_preference.length; ++i) {
             Course course = courses_by_preference[i];
-
-            System.out.println(course);
-            System.out.println(courses_by_preference.length);
-            System.out.println(course.toString());
 
             if (!all_preferences_met || course.getNumStudents()/average_students_per_course <= 1.5) { // golden ratio
                 if (!student.tryToAddCourseAtPriority(i)) {
