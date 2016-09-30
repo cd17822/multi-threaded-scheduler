@@ -5,7 +5,7 @@ import registrationScheduler.entities.Student;
 
 public class Results implements StdoutDisplayInterface {
     // appropriate data structure as private data member
-
+    private ArrayList<Student> studentData;
 
     // appropriate method to save prime number to the data structure
 
@@ -14,7 +14,12 @@ public class Results implements StdoutDisplayInterface {
                             Logger.DebugLevel.CONSTRUCTOR);
     }
 
+    public void writeSchedulesToFile() {
+      
+    }
+
     public void writeScheduleToScreen() {
+
     }
 
     public void storeStudent(Student studentIn) {
