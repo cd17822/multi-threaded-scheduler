@@ -26,7 +26,7 @@ public class Driver{
         Logger.setDebugValue(DEBUG_VALUE);
         CoursePool course_pool = new CoursePool();
         FileProcessor file_processor = new FileProcessor(input_filename);
-        Results results = new Results();
+        Results results = new Results(output_filename);
         CreateWorkers create_workers_factory = new CreateWorkers(file_processor, results, course_pool);
         create_workers_factory.startWorkers();
 

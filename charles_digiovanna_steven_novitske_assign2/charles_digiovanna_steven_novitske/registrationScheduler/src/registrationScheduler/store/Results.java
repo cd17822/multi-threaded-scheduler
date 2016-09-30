@@ -20,7 +20,6 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
 
     public void writeSchedulesToFile() {
       int totalScore = 0;
-      int avgScore = -1;
       try {
         FileWriter writer = new FileWriter(outputFile);
         BufferedWriter buffWriter = new BufferedWriter(writer);
@@ -32,7 +31,6 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
           buffWriter.write("\n");
           totalScore += studentData[i].getPreferenceScore();
         }
-        avgScore = totalScore/80;
         buffWriter.write("Average preference score: " + totalScore/80);
         buffWriter.close();
       } catch(IOException ex) {
