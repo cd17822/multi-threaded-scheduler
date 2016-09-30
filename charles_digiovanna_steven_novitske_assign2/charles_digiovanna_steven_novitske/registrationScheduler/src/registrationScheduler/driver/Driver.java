@@ -31,7 +31,6 @@ public class Driver{
         create_workers_factory.startWorkers();
 
         if(DEBUG_VALUE == 1) {
-            System.out.println("feawf");
           results.writeSchedulesToScreen();
         } else if(DEBUG_VALUE == 0) {
           System.out.println("The average preference value is" + results.getAvgScore());
