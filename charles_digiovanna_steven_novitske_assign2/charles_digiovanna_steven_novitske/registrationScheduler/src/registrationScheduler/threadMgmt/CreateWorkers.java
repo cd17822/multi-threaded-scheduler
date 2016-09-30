@@ -11,6 +11,10 @@ public class CreateWorkers  {
     private Results results;
     private CoursePool course_pool;
 
+	/**
+	 * Creates new CreateWorkers object containing proper
+	 * FileProcessor, Results, and CoursePool objects
+	 */
     public CreateWorkers(FileProcessor fp, Results r, CoursePool cp) {
         Logger.writeMessage("CreateWorkers object constructed\n",
                               Logger.DebugLevel.CONSTRUCTOR);
@@ -19,6 +23,9 @@ public class CreateWorkers  {
         course_pool = cp;
     }
 
+	/**
+	 * @return void
+	 */
     public void startWorkers() {
         Thread[] workers = new Thread[Driver.NUM_THREADS];
 
@@ -33,7 +40,7 @@ public class CreateWorkers  {
         }
 
         file_processor.finish();
-        System.out.println("-----------");
+
         // join workers
         for (Thread w : workers) {
             try {

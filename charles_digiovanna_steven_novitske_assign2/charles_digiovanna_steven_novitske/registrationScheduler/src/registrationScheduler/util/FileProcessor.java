@@ -10,6 +10,10 @@ public class FileProcessor {
     FileReader reader;
     BufferedReader buffReader;
 
+	/**
+	 * Creates new FileProcessor object and opens FileReader and
+	 * BufferedReader objects with @param file
+	 */
     public FileProcessor(String file) {
       Logger.writeMessage("FileProcessor constructed\n", Logger.DebugLevel.CONSTRUCTOR);
       try {
@@ -22,6 +26,9 @@ public class FileProcessor {
       }
     }
 
+	/**
+	 * @return String that is the current line of the input file
+	 */
     public String readLine() {
       String line = "";
       try {
@@ -34,6 +41,9 @@ public class FileProcessor {
       return line;
     }
 
+	/**
+	 * @return void
+	 */
     public void finish() {
       try {
         buffReader.close();

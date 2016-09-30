@@ -9,18 +9,21 @@ import registrationScheduler.entities.Student;
 import registrationScheduler.entities.Course;
 
 public class Results implements StdoutDisplayInterface, FileDisplayInterface {
-    // appropriate data structure as private data member
     private ArrayList<Student> studentData = new ArrayList<>();
     private String outputFile;
     private float avgPreferenceScore;
 
-    // appropriate method to save prime number to the data structure
-
+	/**
+	 * Creates new Results object containing the name of file to write to
+	 */
     public Results(String fileIn) {
       Logger.writeMessage("Results object constructed\n", Logger.DebugLevel.CONSTRUCTOR);
       outputFile = fileIn;
     }
 
+	/**
+	 * @return void
+	 */
     public void writeSchedulesToFile() {
       float totalScore = 0;
       try {
@@ -44,6 +47,9 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
       }
     }
 
+	/**
+	 * @return void
+	 */
     public void writeSchedulesToScreen() {
       float totalScore = 0;
       for (Student s : studentData) {
@@ -58,12 +64,18 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
       System.out.println("Average preference score: " + avgPreferenceScore);
     }
 
-    public void storeStudent(Student studentIn) {
+	/**
+	 * @return void
+	 */
+    public synchronized void storeStudent(Student studentIn) {
       Logger.writeMessage("Student " + studentIn.getName() + " added to Results\n",
                             Logger.DebugLevel.STORECONTENT);
       studentData.add(studentIn);
     }
 
+	/**
+	 * @return float of average preference score of all students
+	 */
     public float getAvgScore() {
       return avgPreferenceScore;
     }

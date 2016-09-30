@@ -8,6 +8,9 @@ public class Logger{
 
     private static DebugLevel debugLevel;
 
+	/**
+	 * @return void
+	 */
     public static void setDebugValue (int levelIn) {
         switch(levelIn) {
            case 4: debugLevel = DebugLevel.CONSTRUCTOR; break;
@@ -18,15 +21,23 @@ public class Logger{
         }
     }
 
+	/**
+	 * @return void
+	 */
     public static void setDebugValue (DebugLevel levelIn) {
         debugLevel = levelIn;
     }
 
-    // @return None
+	/**
+	 * @return void
+	 */
     public static void writeMessage (String message, DebugLevel levelIn) {
         if(levelIn == debugLevel) System.out.println(message);
     }
 
+	/**
+	 * @return the debug level as a String
+	 */
     public String toString() {
         return "Debug Level is " + debugLevel;
     }

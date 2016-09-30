@@ -11,13 +11,8 @@ public class Driver{
     public static int DEBUG_VALUE;
 
     public static void main(String args[]) {
-        if (args.length != 4) {
-            System.err.println("Must have 4 arguments\n");
-        } else if(Integer.parseInt(args[2]) < 1 || Integer.parseInt(args[2]) > 3) {
-            System.err.println("NUM_THREADS must be between 1 and 3\n");
-        } else if(Integer.parseInt(args[3]) < 0 || Integer.parseInt(args[3]) > 4) {
-            System.err.println("DEBUG_VALUE must be between 0 and 4\n");
-        }
+		  validateArgs(args);
+
         String input_filename = args[0];
         String output_filename = args[1];
         NUM_THREADS = Integer.parseInt(args[2]);
@@ -33,7 +28,24 @@ public class Driver{
         if(DEBUG_VALUE == 1) {
           results.writeSchedulesToScreen();
         } else if(DEBUG_VALUE == 0) {
-          System.out.println("The average preference value is" + results.getAvgScore());
+          System.out.println("The average preference value is " + results.getAvgScore());
         }
     }
+
+	/**
+	 * @return void
+	 */
+	public static void validateArgs(String args[]) {
+		if (args.length != 4) {
+			System.err.println("Must have 4 arguments\n");
+			System.exit(0);
+		} else if(Integer.parseInt(args[2]) < 1 || Integer.parseInt(args[2]) > 3) {
+      	System.err.println("NUM_THREADS must be between 1 and 3\n");
+			System.exit(0);
+      } else if(Integer.parseInt(args[3]) < 0 || Integer.parseInt(args[3]) > 4) {
+         System.err.println("DEBUG_VALUE must be between 0 and 4\n");
+			System.exit(0);
+      }
+		return;
+	}
 }

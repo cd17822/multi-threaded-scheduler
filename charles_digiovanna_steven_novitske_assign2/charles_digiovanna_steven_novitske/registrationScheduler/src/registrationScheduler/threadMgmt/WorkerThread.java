@@ -12,6 +12,10 @@ public class WorkerThread implements Runnable  {
     private Results results;
     private CoursePool course_pool;
 
+	/**
+	 * Creates new WorkerThread with proper FileProcessor, Results,
+	 * and CoursePool objects
+	 */
     public WorkerThread(FileProcessor fp, Results r, CoursePool cp) {
         Logger.writeMessage("WorkerThread constructed\n",
                               Logger.DebugLevel.CONSTRUCTOR);
@@ -20,6 +24,9 @@ public class WorkerThread implements Runnable  {
         course_pool = cp;
     }
 
+	/**
+	 * @return void
+	 */
     public void run() {
         Logger.writeMessage("Thread run() called\n",
                               Logger.DebugLevel.THREADRUN);
@@ -32,6 +39,9 @@ public class WorkerThread implements Runnable  {
         }
     }
 
+	/**
+	 * @return Student object that was created with the line from file
+	 */
     private Student createStudent(String line) {
         String[] tokens = line.split("\\s+");
 
@@ -58,9 +68,12 @@ public class WorkerThread implements Runnable  {
 
         student.setPreferences(preferences);
 
-        return student; //Added for compilation
+        return student;
     }
 
+	/**
+	 * @return void
+	 */
     private void assignCourses(Student student) {
         Course[] courses_by_preference = student.getPreferences();
         float average_students_per_course = course_pool.getAverageStudentsPerCourse();
