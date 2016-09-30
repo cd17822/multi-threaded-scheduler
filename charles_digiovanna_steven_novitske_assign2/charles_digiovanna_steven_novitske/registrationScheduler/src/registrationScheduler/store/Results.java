@@ -6,6 +6,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import registrationScheduler.util.Logger;
 import registrationScheduler.entities.Student;
+import registrationScheduler.entities.Course;
 
 public class Results implements StdoutDisplayInterface, FileDisplayInterface {
     // appropriate data structure as private data member
@@ -27,7 +28,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
         for(int i=0; i<studentData.size(); i++) {
           buffWriter.write(studentData.get(i).getName());
           for(int j=0; j<5; j++) {
-            buffWriter.write(" " + studentData.get(i).getCourses.get(j));
+            buffWriter.write(" " + studentData.get(i).getCourses().get(j));
           }
           buffWriter.write("\n");
           totalScore += studentData.get(i).getPreferenceScore();
@@ -46,7 +47,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
       for(int i=0; i<studentData.size(); i++) {
         System.out.println(studentData.get(i).getName());
         for(int j=0; j<5; j++) {
-          System.out.println(" " + studentData.get(i).getCourses.get(j));
+          System.out.println(" " + studentData.get(i).getCourses().get(j));
         }
         System.out.println("\n");
         totalScore += studentData.get(i).getPreferenceScore();
