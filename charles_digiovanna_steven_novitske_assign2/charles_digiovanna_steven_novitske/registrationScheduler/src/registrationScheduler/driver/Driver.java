@@ -31,7 +31,7 @@ public class Driver{
         create_workers_factory.startWorkers();
 
         if(DEBUG_VALUE == 1) {
-          results.writeScheduleToScreen();
+          results.writeSchedulesToScreen();
         } else if(DEBUG_VALUE == 0) {
           System.out.println("The average preference value is X.Y\n");
         }

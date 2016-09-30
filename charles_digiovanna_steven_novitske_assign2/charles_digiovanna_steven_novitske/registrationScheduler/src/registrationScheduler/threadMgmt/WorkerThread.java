@@ -23,10 +23,13 @@ public class WorkerThread implements Runnable  {
     public void run() {
         Logger.writeMessage("Thread run() called\n",
                               Logger.DebugLevel.THREADRUN);
-        String line = file_processor.readLine();
-        Student student = createStudent(line);
-        assignCourses(student);
-        results.storeStudent(student);
+
+        String line;
+        while((line = file_processor.readLine()) != null) {
+            Student student = createStudent(line);
+            assignCourses(student);
+            results.storeStudent(student);
+        }
     }
 
     public void join() {
