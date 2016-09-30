@@ -17,6 +17,8 @@ public class FileProcessor {
         buffReader = new BufferedReader(reader);
       } catch(IOException ex) {
         ex.printStackTrace();
+      } finally {
+
       }
     }
 
@@ -26,6 +28,8 @@ public class FileProcessor {
         line = buffReader.readLine();
       } catch(IOException ex) {
         ex.printStackTrace();
+      } finally {
+
       }
       return line;
     }
@@ -35,6 +39,8 @@ public class FileProcessor {
         buffReader.close();
       } catch(IOException ex) {
         ex.printStackTrace();
+      } finally {
+        
       }
     }
 }
