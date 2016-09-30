@@ -62,6 +62,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
     public void storeStudent(Student studentIn) {
       Logger.writeMessage("Student " + studentIn.getName() + " added to Results\n",
                             Logger.DebugLevel.STORECONTENT);
+      studentData.add(studentIn);
     }
 
     public float getAvgScore() {
