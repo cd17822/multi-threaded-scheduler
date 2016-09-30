@@ -32,10 +32,6 @@ public class WorkerThread implements Runnable  {
         }
     }
 
-    public void join() {
-
-    }
-
     private Student createStudent(String line) {
         String[] tokens = line.split("\\s+");
 

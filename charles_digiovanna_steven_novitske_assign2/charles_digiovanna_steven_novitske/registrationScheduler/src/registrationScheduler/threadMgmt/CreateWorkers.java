@@ -20,23 +20,30 @@ public class CreateWorkers  {
     }
 
     public void startWorkers() {
-        WorkerThread[] workers = new WorkerThread[Driver.NUM_THREADS];
+        Thread[] workers = new Thread[Driver.NUM_THREADS];
 
         // create workers
         for (int i = 0; i < Driver.NUM_THREADS; ++i) {
-            workers[i] = new WorkerThread(file_processor, results, course_pool);
+            workers[i] = new Thread(new WorkerThread(file_processor, results, course_pool));
         }
 
         // run workers
-        for (WorkerThread w : workers) {
+        for (Thread w : workers) {
             w.run();
         }
 
         file_processor.finish();
-
+        System.out.println("-----------");
         // join workers
-        for (WorkerThread w : workers) {
-            w.join();
+        for (Thread w : workers) {
+            try {
+                w.join();
+            } catch(InterruptedException ex) {
+                ex.printStackTrace();
+            } finally {
+
+            }
+
         }
     }
 }
