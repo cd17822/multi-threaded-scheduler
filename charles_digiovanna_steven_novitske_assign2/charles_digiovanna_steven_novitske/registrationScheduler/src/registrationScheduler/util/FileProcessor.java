@@ -21,7 +21,7 @@ public class FileProcessor {
     }
 
     public String readLine() {
-      String line;
+      String line = "";
       try {
         line = buffReader.readLine();
       } catch(IOException ex) {
