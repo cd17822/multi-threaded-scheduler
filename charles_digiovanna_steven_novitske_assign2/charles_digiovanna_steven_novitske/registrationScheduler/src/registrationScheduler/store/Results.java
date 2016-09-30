@@ -25,13 +25,13 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
       try {
         FileWriter writer = new FileWriter(outputFile);
         BufferedWriter buffWriter = new BufferedWriter(writer);
-        for(int i=0; i<studentData.size(); i++) {
-          buffWriter.write(studentData.get(i).getName());
-          for(int j=0; j<5; j++) {
-            buffWriter.write(" " + studentData.get(i).getCourses().get(j));
+        for (Student s : studentData) {
+          buffWriter.write(s.getName());
+          for (Course c : s.getCourses()){
+            buffWriter.write(" " + c);
           }
           buffWriter.write("\n");
-          totalScore += studentData.get(i).getPreferenceScore();
+          totalScore += s.getPreferenceScore();
         }
         buffWriter.write("Average preference score: " + totalScore/80);
         buffWriter.close();
