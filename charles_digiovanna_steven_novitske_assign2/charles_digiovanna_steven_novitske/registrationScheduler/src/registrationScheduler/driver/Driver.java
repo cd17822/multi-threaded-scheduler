@@ -27,9 +27,9 @@ public class Driver{
 
         if(DEBUG_VALUE == 1) {
           results.writeSchedulesToScreen();
-        } else if(DEBUG_VALUE == 0) {
-          System.out.println("The average preference value is " + results.getAvgScore());
         }
+
+        System.out.println("Average preference score: " + results.getAvgScore());
     }
 
 	/**

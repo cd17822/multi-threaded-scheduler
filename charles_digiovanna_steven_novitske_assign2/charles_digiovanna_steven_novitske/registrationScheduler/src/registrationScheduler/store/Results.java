@@ -25,7 +25,6 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
 	 * @return void
 	 */
     public void writeSchedulesToFile() {
-      float totalScore = 0;
       try {
         FileWriter writer = new FileWriter(outputFile);
         BufferedWriter buffWriter = new BufferedWriter(writer);
@@ -35,10 +34,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
             buffWriter.write(" " + c);
           }
           buffWriter.write("\n");
-          totalScore += s.getPreferenceScore();
         }
-        avgPreferenceScore = totalScore/80;
-        buffWriter.write("Average preference score: " + avgPreferenceScore);
         buffWriter.close();
       } catch(IOException ex) {
         ex.printStackTrace();
@@ -51,17 +47,13 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
 	 * @return void
 	 */
     public void writeSchedulesToScreen() {
-      float totalScore = 0;
       for (Student s : studentData) {
         System.out.println(s.getName());
         for (Course c : s.getCourses()) {
           System.out.println(" " + c);
         }
         System.out.println("\n");
-        totalScore += s.getPreferenceScore();
       }
-      avgPreferenceScore = totalScore/80;
-      System.out.println("Average preference score: " + avgPreferenceScore);
     }
 
 	/**
@@ -69,7 +61,7 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
 	 */
     public synchronized void storeStudent(Student studentIn) {
       Logger.writeMessage("Student " + studentIn.getName() + " added to Results\n",
-                            Logger.DebugLevel.STORECONTENT);
+                            Logger.DebugLevel.ADDTORESULTS);
       studentData.add(studentIn);
     }
 
@@ -77,6 +69,14 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
 	 * @return float of average preference score of all students
 	 */
     public float getAvgScore() {
+      float totalScore = 0;
+
+      for (Student s : studentData) {
+        totalScore += s.getPreferenceScore();
+      }
+
+      avgPreferenceScore = totalScore/80;
+
       return avgPreferenceScore;
     }
 }

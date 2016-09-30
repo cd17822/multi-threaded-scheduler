@@ -77,17 +77,16 @@ public class WorkerThread implements Runnable  {
     private void assignCourses(Student student) {
         Course[] courses_by_preference = student.getPreferences();
         float average_students_per_course = course_pool.getAverageStudentsPerCourse();
-        Boolean all_preferences_met = true;
+        int rejections = 0; // amount of times they couldn't get into a class they wanted
 
         for  (int i = 0; i < courses_by_preference.length; ++i) {
             Course course = courses_by_preference[i];
-
-            if (!all_preferences_met || course.getNumStudents()/average_students_per_course <= 1.5) { // golden ratio
+            if (rejections >= 2 || course.getNumStudents()/average_students_per_course <= 1.05) { // 1.05 is the golden ratio
                 if (!student.tryToAddCourseAtPriority(i)) {
-                    all_preferences_met = false;
+                    ++rejections;
                 }
             } else {
-                all_preferences_met = false;
+                ++rejections;
             }
         }
     }
