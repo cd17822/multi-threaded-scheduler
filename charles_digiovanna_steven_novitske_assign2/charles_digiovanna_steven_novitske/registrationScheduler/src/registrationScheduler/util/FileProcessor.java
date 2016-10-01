@@ -15,7 +15,8 @@ public class FileProcessor {
 	 * BufferedReader objects with @param file
 	 */
     public FileProcessor(String file) {
-      Logger.writeMessage("FileProcessor constructed\n", Logger.DebugLevel.CONSTRUCTOR);
+      Logger.writeMessage("FileProcessor constructed\n",
+                            Logger.DebugLevel.CONSTRUCTOR);
       try {
         reader = new FileReader(file);
         buffReader = new BufferedReader(reader);
@@ -50,7 +51,7 @@ public class FileProcessor {
       } catch(IOException ex) {
         ex.printStackTrace();
       } finally {
-        
+
       }
     }
 }

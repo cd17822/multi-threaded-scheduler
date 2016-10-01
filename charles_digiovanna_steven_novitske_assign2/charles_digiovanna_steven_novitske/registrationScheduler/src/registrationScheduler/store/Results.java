@@ -17,7 +17,8 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
 	 * Creates new Results object containing the name of file to write to
 	 */
     public Results(String fileIn) {
-      Logger.writeMessage("Results object constructed\n", Logger.DebugLevel.CONSTRUCTOR);
+      Logger.writeMessage("Results object constructed\n",
+                            Logger.DebugLevel.CONSTRUCTOR);
       outputFile = fileIn;
     }
 
@@ -33,9 +34,9 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
           for (Course c : s.getCourses()){
             buffWriter.write(" " + c);
           }
-          buffWriter.write("\n");
+          buffWriter.write(" " + s.getPreferenceScore() + "\n");
         }
-        buffWriter.write("Average preference score: " + getAvgScore());
+        buffWriter.write("The average preference value is " + getAvgScore());
         buffWriter.close();
       } catch(IOException ex) {
         ex.printStackTrace();
@@ -49,11 +50,11 @@ public class Results implements StdoutDisplayInterface, FileDisplayInterface {
 	 */
     public void writeSchedulesToScreen() {
       for (Student s : studentData) {
-        System.out.println(s.getName());
+        System.out.print(s.getName());
         for (Course c : s.getCourses()) {
-          System.out.println(" " + c);
+          System.out.print(" " + c);
         }
-        System.out.println("\n");
+        System.out.print("\n");
       }
     }
 

@@ -1,81 +1,81 @@
-Student_1 Course('5') Course('2') Course('6') Course('1') Course('7')
-Student_2 Course('7') Course('2') Course('4') Course('5') Course('3')
-Student_3 Course('6') Course('4') Course('1') Course('2') Course('3')
-Student_4 Course('4') Course('5') Course('7') Course('3') Course('6')
-Student_5 Course('3') Course('5') Course('1') Course('7') Course('6')
-Student_6 Course('5') Course('2') Course('1') Course('7') Course('4')
-Student_7 Course('6') Course('1') Course('4') Course('2') Course('3')
-Student_8 Course('2') Course('7') Course('4') Course('5') Course('3')
-Student_9 Course('1') Course('7') Course('4') Course('5') Course('6')
-Student_10 Course('1') Course('6') Course('3') Course('2') Course('7')
-Student_11 Course('4') Course('1') Course('2') Course('6') Course('3')
-Student_12 Course('5') Course('6') Course('3') Course('4') Course('2')
-Student_13 Course('5') Course('7') Course('4') Course('2') Course('1')
-Student_14 Course('3') Course('7') Course('5') Course('6') Course('1')
-Student_15 Course('5') Course('3') Course('4') Course('2') Course('1')
-Student_16 Course('6') Course('7') Course('1') Course('4') Course('5')
-Student_17 Course('6') Course('5') Course('2') Course('1') Course('3')
-Student_18 Course('7') Course('2') Course('4') Course('3') Course('6')
-Student_19 Course('6') Course('3') Course('1') Course('5') Course('7')
-Student_20 Course('4') Course('5') Course('7') Course('1') Course('2')
-Student_21 Course('7') Course('6') Course('5') Course('3') Course('2')
-Student_22 Course('2') Course('1') Course('6') Course('4') Course('3')
-Student_23 Course('6') Course('2') Course('3') Course('7') Course('5')
-Student_24 Course('4') Course('5') Course('7') Course('1') Course('2')
-Student_25 Course('4') Course('3') Course('6') Course('7') Course('1')
-Student_26 Course('7') Course('6') Course('1') Course('3') Course('5')
-Student_27 Course('2') Course('1') Course('3') Course('4') Course('5')
-Student_28 Course('1') Course('5') Course('3') Course('6') Course('2')
-Student_29 Course('3') Course('6') Course('4') Course('1') Course('5')
-Student_30 Course('4') Course('6') Course('2') Course('3') Course('7')
-Student_31 Course('2') Course('4') Course('1') Course('7') Course('6')
-Student_32 Course('2') Course('1') Course('3') Course('7') Course('5')
-Student_33 Course('1') Course('4') Course('6') Course('5') Course('7')
-Student_34 Course('2') Course('4') Course('7') Course('3') Course('5')
-Student_35 Course('6') Course('1') Course('5') Course('7') Course('4')
-Student_36 Course('6') Course('3') Course('1') Course('2') Course('7')
-Student_37 Course('3') Course('7') Course('5') Course('6') Course('2')
-Student_38 Course('6') Course('4') Course('1') Course('2') Course('7')
-Student_39 Course('4') Course('7') Course('5') Course('3') Course('6')
-Student_40 Course('2') Course('6') Course('7') Course('1') Course('4')
-Student_41 Course('2') Course('4') Course('5') Course('6') Course('1')
-Student_42 Course('3') Course('2') Course('7') Course('4') Course('1')
-Student_43 Course('6') Course('2') Course('7') Course('4') Course('3')
-Student_44 Course('5') Course('3') Course('4') Course('2') Course('7')
-Student_45 Course('6') Course('5') Course('7') Course('1') Course('4')
-Student_46 Course('2') Course('3') Course('6') Course('4') Course('1')
-Student_47 Course('3') Course('7') Course('6') Course('1') Course('2')
-Student_48 Course('1') Course('5') Course('2') Course('3') Course('4')
-Student_49 Course('7') Course('3') Course('1') Course('6') Course('4')
-Student_50 Course('4') Course('3') Course('1') Course('5') Course('7')
-Student_51 Course('1') Course('7') Course('3') Course('4') Course('6')
-Student_52 Course('3') Course('1') Course('6') Course('2') Course('4')
-Student_53 Course('5') Course('3') Course('6') Course('2') Course('7')
-Student_54 Course('1') Course('4') Course('6') Course('5') Course('3')
-Student_55 Course('7') Course('1') Course('6') Course('4') Course('2')
-Student_56 Course('6') Course('2') Course('3') Course('1') Course('5')
-Student_57 Course('4') Course('3') Course('1') Course('2') Course('5')
-Student_58 Course('5') Course('3') Course('6') Course('2') Course('4')
-Student_59 Course('3') Course('6') Course('5') Course('2') Course('1')
-Student_60 Course('1') Course('7') Course('4') Course('5') Course('3')
-Student_61 Course('4') Course('2') Course('5') Course('1') Course('7')
-Student_62 Course('4') Course('6') Course('7') Course('3') Course('2')
-Student_63 Course('6') Course('5') Course('2') Course('7') Course('1')
-Student_64 Course('1') Course('2') Course('7') Course('5') Course('3')
-Student_65 Course('3') Course('7') Course('1') Course('2') Course('6')
-Student_66 Course('4') Course('3') Course('5') Course('7') Course('6')
-Student_67 Course('2') Course('7') Course('4') Course('1') Course('3')
-Student_68 Course('1') Course('5') Course('6') Course('2') Course('7')
-Student_69 Course('2') Course('4') Course('6') Course('5') Course('3')
-Student_70 Course('3') Course('7') Course('6') Course('5') Course('4')
-Student_71 Course('2') Course('1') Course('6') Course('3') Course('5')
-Student_72 Course('7') Course('5') Course('6') Course('4') Course('3')
-Student_73 Course('1') Course('2') Course('7') Course('6') Course('4')
-Student_74 Course('5') Course('7') Course('1') Course('4') Course('6')
-Student_75 Course('1') Course('7') Course('4') Course('6') Course('2')
-Student_76 Course('5') Course('4') Course('7') Course('3') Course('2')
-Student_77 Course('3') Course('4') Course('5') Course('6') Course('1')
-Student_78 Course('5') Course('6') Course('2') Course('1') Course('7')
-Student_79 Course('4') Course('7') Course('2') Course('3') Course('5')
-Student_80 Course('5') Course('3') Course('6') Course('4') Course('1')
-Average preference score: 16.15
+Student_1 C D E F G 25
+Student_2 A B E F G 21
+Student_3 A B C D G 17
+Student_4 A B C D E 15
+Student_5 A B C D E 15
+Student_6 C D E F G 25
+Student_7 A B E F G 21
+Student_8 A B C D F 16
+Student_9 A B C D E 15
+Student_10 C D E F G 25
+Student_11 A B E F G 21
+Student_12 A B C D F 16
+Student_13 C D E F G 25
+Student_14 A B E F G 21
+Student_15 A B C D F 16
+Student_16 A B C D E 15
+Student_17 A B C D E 15
+Student_18 C D E F G 25
+Student_19 A B E F G 21
+Student_20 A B C D F 16
+Student_21 A B C D E 15
+Student_22 C D E F G 25
+Student_23 A B E F G 21
+Student_24 A B C D F 16
+Student_25 C D E F G 25
+Student_26 A B E F G 21
+Student_27 A B C D F 16
+Student_28 A B C D E 15
+Student_29 A B C D E 15
+Student_30 C D E F G 25
+Student_31 A B E F G 21
+Student_32 A B C D F 16
+Student_33 A B C D E 15
+Student_34 C D E F G 25
+Student_35 A B E F G 21
+Student_36 A B C D F 16
+Student_37 C D E F G 25
+Student_38 A B E F G 21
+Student_39 A B C D F 16
+Student_40 A B C D E 15
+Student_41 A B C D E 15
+Student_42 C D E F G 25
+Student_43 A B E F G 21
+Student_44 A B C D F 16
+Student_45 A B C D E 15
+Student_46 C D E F G 25
+Student_47 A B E F G 21
+Student_48 A B C D F 16
+Student_49 C D E F G 25
+Student_50 A B E F G 21
+Student_51 A B C D F 16
+Student_52 A B C D E 15
+Student_53 C D E F G 25
+Student_54 A B E F G 21
+Student_55 A B C D F 16
+Student_56 A B C D E 15
+Student_57 A B C D E 15
+Student_58 C D E F G 25
+Student_59 A B E F G 21
+Student_60 A B C D F 16
+Student_61 A B C D E 15
+Student_62 C D E F G 25
+Student_63 A B E F G 21
+Student_64 A B C D F 16
+Student_65 A B C D E 15
+Student_66 C D E F G 25
+Student_67 A B E F G 21
+Student_68 A B C D F 16
+Student_69 A B C D E 15
+Student_70 C D E F G 25
+Student_71 A B E F G 21
+Student_72 A B C D F 16
+Student_73 C D E F G 25
+Student_74 A B E F G 21
+Student_75 A B C D F 16
+Student_76 A B C D E 15
+Student_77 C D E F G 25
+Student_78 A B E F G 21
+Student_79 A B C D F 16
+Student_80 A B C D E 15
+The average preference value is 19.2625

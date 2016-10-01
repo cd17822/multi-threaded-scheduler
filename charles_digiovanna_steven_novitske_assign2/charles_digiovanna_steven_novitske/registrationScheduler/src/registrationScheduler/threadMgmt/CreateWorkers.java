@@ -26,11 +26,11 @@ public class CreateWorkers  {
 	/**
 	 * @return void
 	 */
-    public void startWorkers() {
-        Thread[] workers = new Thread[Driver.NUM_THREADS];
+    public void startWorkers(int numThreads) {
+        Thread[] workers = new Thread[numThreads];
 
         // create workers
-        for (int i = 0; i < Driver.NUM_THREADS; ++i) {
+        for (int i = 0; i < numThreads; ++i) {
             workers[i] = new Thread(new WorkerThread(file_processor, results, course_pool));
         }
 

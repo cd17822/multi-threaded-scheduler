@@ -23,7 +23,7 @@ public class Course {
      * @return string with description of object.
      */
     public String toString() {
-        return "Course('" + name + "')";
+        return name;
     }
 
     /**

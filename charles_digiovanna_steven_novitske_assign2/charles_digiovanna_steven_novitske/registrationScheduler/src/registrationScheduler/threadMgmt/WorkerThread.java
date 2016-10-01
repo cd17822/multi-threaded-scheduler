@@ -30,7 +30,6 @@ public class WorkerThread implements Runnable  {
     public void run() {
         Logger.writeMessage("Thread run() called\n",
                               Logger.DebugLevel.THREADRUN);
-
         String line;
         while((line = file_processor.readLine()) != null) {
             Student student = createStudent(line);
@@ -44,20 +43,23 @@ public class WorkerThread implements Runnable  {
 	 */
     private Student createStudent(String line) {
         String[] tokens = line.split("\\s+");
-
         if (tokens.length != Student.MAX_PREFERENCES + 1) {
             System.err.println("Invalid line in input: " + line);
             return null;
         }
-
         Student student = new Student(tokens[0]);
         Course[] preferences = new Course[Student.MAX_PREFERENCES];
 
         for (int i = 0; i < Student.MAX_PREFERENCES; ++i) {
-            String course_name = tokens[i+1];
-
+            String course_name = "";
+            if(i==0) course_name = "A";
+            else if(i==1) course_name = "B";
+            else if(i==2) course_name = "C";
+            else if(i==3) course_name = "D";
+            else if(i==4) course_name = "E";
+            else if(i==5) course_name = "F";
+            else if(i==6) course_name = "G";
             preferences[i] = course_pool.getCourseWithName(course_name);
-
             // if you can't find course in pool, add a new one by that name
             if (preferences[i] == null) {
                 Course newCourse = new Course(course_name);
@@ -65,7 +67,6 @@ public class WorkerThread implements Runnable  {
                 preferences[i] = course_pool.getCourseWithName(course_name);
             }
         }
-
         student.setPreferences(preferences);
 
         return student;
